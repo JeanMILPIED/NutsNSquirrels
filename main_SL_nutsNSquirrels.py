@@ -104,7 +104,7 @@ st.image('squirrels.jpeg')
 st.title("🌰🐿👁‍🗨 Squirrels 'n Nuts" )
 st.subheader('Advertise Nuts for Squirrels in Central Park- NYC')
 st.write("Let's imagine YOU want to invest for advertising specifc nuts in Central Park \n to target specifc Squirrels populations.")
-st.subheader("Let's show YOU where to go!")
+st.subheader("Rather than putting Adds in the lawn randomly, Let's show YOU where to !")
 
 df=pd.read_csv('Squirrels-Census_data.csv')
 squirr_color_list=['All','Gray','Cinnamon','Black']
@@ -153,4 +153,4 @@ st.caption("Hypothesis for the Adds campaign impact computation are: "
            "5.some squirrels like the taste of others squirrels populations: so total squirrel population which is not the targetted colour count for 0.1  (factor 0.1); "
            "6.Squirrels alerted of predators do not pay attention to adds and make other do not look: it is a negative factor (factor -0.2)")
 st.caption("Dataset can be found here: https://catalog.data.gov/dataset/2018-central-park-squirrel-census-squirrel-data")
-st.caption("Developped by Jean MILPIED")
+st.caption("Developped by Jean MILPIED; banner image created on lexica.art")
