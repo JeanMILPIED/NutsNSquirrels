@@ -4,7 +4,7 @@ from streamlit_folium import folium_static
 import folium
 
 
-def create_map(list_points, value_to_write='best Adds positions'):
+def create_map(list_points):
     m = folium.Map()
     points=[]
     for i in range(len(list_points)):
@@ -15,8 +15,6 @@ def create_map(list_points, value_to_write='best Adds positions'):
     sw = df[['Lat', 'Long']].min().values.tolist()
     ne = df[['Lat', 'Long']].max().values.tolist()
     m.fit_bounds([sw, ne])
-    folium.Marker(location=[ne[0],(sw[1]+ne[1])/2],
-              icon=folium.DivIcon(html='<div style="font-size: 10pt; color:black; width: 150px; font-family:verdana; background-color: white; opacity:0.8";display:flex;>{}</div>'.format(value_to_write),class_name="mapText")).add_to(m)
     return m
 
 def extract_pop_metrics(df, Color):
@@ -94,6 +92,9 @@ def get_optimum_position(Color, df, pc_max_score=30):
         the_Hect = Hectare_socio_colour(my_hect, Color)
         the_Hect.compute_GPS(df)
         list_GPS_best.append(the_Hect.mean_GPS)
+
+    #compare to a random positioning of the same number of adds
+    # TO CONTINUE
 
     return list_best_Hectares, max_score, pc_max_score, Color, list_GPS_best
 
