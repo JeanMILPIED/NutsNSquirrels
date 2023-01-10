@@ -127,6 +127,7 @@ for i in range(len(list_prop)):
 #extract Hectares info
 list_best_Hectares, max_score, pc_max_score, Color, list_GPS_best=get_optimum_position(chosen_color, df, pc_max_score)
 st.write('{} adds for {} Squirrels to reach {}% of the maxscore={}'.format(len(list_best_Hectares), Color, pc_max_score, max_score))
+
 #we add the minimum and maximum GPS positions to the list of best points at the end
 min_X=df.X.min()
 max_X=df.X.max()
@@ -137,14 +138,10 @@ max_GPS=[max_X, max_Y]
 list_GPS_best.append(min_GPS)
 list_GPS_best.append(max_GPS)
 
-print(list_GPS_best)
-
+#we create the map
 map =create_map(list_GPS_best, value_to_write='best Adds positions')
 st.write('Showing positions for the best Adds (max. 10) 🎯')
 st.session_state['map'] = map
-# st.session_state['list_map_objects']=[polyline,spans,dict_output]
-# st.session_state['synthesis']=synthesis
-# st.write(st.session_state['synthesis'])
 folium_static(st.session_state['map'])
 
 st.write("*******************************************")
