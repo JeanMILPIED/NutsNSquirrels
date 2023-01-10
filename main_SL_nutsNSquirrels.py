@@ -139,7 +139,7 @@ list_GPS_best.append(min_GPS)
 list_GPS_best.append(max_GPS)
 
 #we create the map
-map =create_map(list_GPS_best, value_to_write='best Adds positions')
+map =create_map(list_GPS_best)
 st.write('Showing positions for the best Adds (max. 10) 🎯')
 st.session_state['map'] = map
 folium_static(st.session_state['map'])
