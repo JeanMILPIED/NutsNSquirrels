@@ -154,3 +154,4 @@ st.caption("Hypothesis for the Adds campaign impact computation are: "
            "6.Squirrels alerted of predators do not pay attention to adds and make other do not look: it is a negative factor (factor -0.2)")
 st.caption("Dataset can be found here: https://catalog.data.gov/dataset/2018-central-park-squirrel-census-squirrel-data")
 st.caption("Developped by Jean MILPIED; banner image created on lexica.art")
+st.caption("Public code on Github: https://github.com/JeanMILPIED/NutsNSquirrels")
